@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_easy_list_app/pages/auth.dart';
 import './pages/products_admin.dart';
 import './pages/product.dart';
 import './pages/products.dart';
 
 void main(List<String> args) {
+  //debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
 
@@ -34,9 +36,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          brightness: Brightness.light,
-          primarySwatch: Colors.deepOrange,
-          accentColor: Colors.deepPurple),
+        brightness: Brightness.light,
+        primarySwatch: Colors.deepOrange,
+        accentColor: Colors.deepPurple,
+      ),
       // home: AuthPage(),
       routes: {
         '/': (BuildContext context) => AuthPage(),
